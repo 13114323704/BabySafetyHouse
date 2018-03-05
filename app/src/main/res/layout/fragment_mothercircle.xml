@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <Button
+            android:id="@+id/title_button"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="辣妈圈"
+            android:textSize="17sp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/title_layout"
+        android:background="@drawable/title_layout_top_divider" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_layout">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@android:color/holo_blue_bright"
+            app:tabMinWidth="80dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@android:color/holo_blue_bright"
+            app:tabTextColor="@android:color/black" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tablayout" />
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/multiple_actions_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            app:fab_addButtonColorNormal="@android:color/holo_green_light"
+            app:fab_addButtonColorPressed="@android:color/holo_blue_light"
+            app:fab_addButtonPlusIconColor="@android:color/holo_red_light"
+            app:fab_addButtonSize="normal"
+            app:fab_expandDirection="up"
+            app:fab_labelStyle="@style/menu_labels_style">
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/float_button_freshthings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_icon="@mipmap/freshthings"
+                app:fab_colorNormal="@android:color/holo_blue_light"
+                app:fab_colorPressed="@android:color/holo_red_light"
+                app:fab_title="发布新鲜事" />
+
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/float_button_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_icon="@mipmap/question"
+                app:fab_colorNormal="@android:color/holo_blue_light"
+                app:fab_colorPressed="@android:color/holo_red_light"
+                app:fab_title="发布问答" />
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

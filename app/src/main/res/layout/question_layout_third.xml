@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/divider_line_bottom"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="问：乐宝安全屋的具体位置是在哪里？"
+        android:textSize="17sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="答：乐宝安全屋位于武汉市武汉科技大学东门外东澜岸广场三楼往左转100米左右！您还可以通过电话联系我们乐宝安全屋的服务员去接您，乐宝安全屋期待您的光临！"
+        android:textSize="15sp" />
+
+
+</LinearLayout>

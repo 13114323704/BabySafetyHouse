@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/divider_line_bottom"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="问：众圆安全屋的环境怎么样？"
+        android:textSize="17sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="答：众圆安全屋一直以环境优美，氛围良好而深受广大消费者的喜爱，里面有专业人员打扫清理，只为给您一个舒适的体验，请您放心前来消费，众圆安全屋竭诚为您服务！"
+        android:textSize="15sp" />
+
+
+</LinearLayout>

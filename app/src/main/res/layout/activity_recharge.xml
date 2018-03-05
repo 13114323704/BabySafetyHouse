@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+
+        <ImageView
+            android:id="@+id/image_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:onClick="image_back"
+            android:src="@mipmap/back_black" />
+
+        <Button
+            android:id="@+id/title_button"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:text="充值"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/title_layout"
+        android:background="@drawable/title_layout_top_divider" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/title_layout">
+
+        <TextView
+            android:id="@+id/recharge_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="充值金额"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/money_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_below="@+id/recharge_label"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/divider_line_around"
+                    android:padding="5dp"
+                    android:onClick="recharge1"
+                    android:text="1元"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/divider_line_around"
+                    android:padding="5dp"
+                    android:text="2元"
+                    android:onClick="recharge2"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:onClick="recharge3"
+                    android:background="@drawable/divider_line_around"
+                    android:padding="5dp"
+                    android:text="3元"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/divider_line_around"
+                    android:padding="5dp"
+                    android:onClick="recharge4"
+                    android:gravity="center"
+                    android:text="5元"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/divider_line_around"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:onClick="recharge5"
+                    android:text="10元"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="recharge6"
+                    android:background="@drawable/divider_line_around"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:text="50元"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/divider_line_around"
+                    android:padding="5dp"
+                    android:text="100元"
+                    android:onClick="recharge7"
+                    android:gravity="center"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/divider_line_around"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:onClick="recharge8"
+                    android:text="200元"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/edittext_getmoney"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/divider_line_around"
+                    android:hint="请输入金额"
+                    android:padding="5dp"
+                    android:textColorHint="#A9A9A9" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ways_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/money_layout"
+            android:layout_margin="10dp"
+            android:text="支付方式"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ways_label"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_login_bg"
+                android:onClick="bywechat"
+                android:text="微信支付" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:onClick="byzfb"
+                android:background="@drawable/btn_login_bg"
+                android:text="支付宝支付" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

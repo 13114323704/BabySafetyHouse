@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/welcome_bg"/>
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_welcome_bg"
+        android:gravity="center"
+        android:onClick="go"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/btn_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跳过"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_text"
+            android:text="3" />
+
+    </LinearLayout>
+
+</RelativeLayout>

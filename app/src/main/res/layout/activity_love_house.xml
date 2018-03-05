@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <ImageView
+            android:id="@+id/image_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:onClick="image_back"
+            android:src="@mipmap/back_black" />
+
+        <Button
+            android:id="@+id/title_button"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:text="喜欢的安全屋"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/title_layout"
+        android:background="@drawable/title_layout_top_divider" />
+
+    <com.baoyz.widget.PullRefreshLayout
+        android:id="@+id/pullRefreshLayout_love_house"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_layout"
+        app:refreshType="water_drop">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/layout_lovehouse1"
+                    layout="@layout/babysafetyhouse_layout_second" />
+
+                <include
+                    android:id="@+id/layout_lovehouse2"
+                    layout="@layout/babysafetyhouse_layout_third" />
+
+
+                <include
+                    android:id="@+id/layout_lovehouse3"
+                    layout="@layout/babysafetyhouse_layout_fourth" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="没有更多喜欢的安去屋啦！"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </ScrollView>
+
+    </com.baoyz.widget.PullRefreshLayout>
+
+
+</RelativeLayout>

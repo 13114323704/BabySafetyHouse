@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/divider_line_bottom"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="问：宜佳宝贝安全屋的特点是什么？"
+        android:textSize="17sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="答：宜佳宝贝安全屋的特点是服务专业，里面有资深的专业宝贝服务员为您的宝贝服务，让您的宝贝过的舒适愉快，您可以放心的将您的宝贝放在我们这里为您照料，若您不满我们的服务，您可以投诉给我们公司，我们来为您处理！"
+        android:textSize="15sp" />
+
+
+</LinearLayout>

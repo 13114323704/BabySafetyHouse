@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <Button
+            android:id="@+id/title_button"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:text="宝贝安全屋"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/image_scanning"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:clickable="true"
+            android:src="@mipmap/scanning" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/title_layout"
+        android:background="@drawable/title_layout_top_divider" />
+
+
+    <com.baoyz.widget.PullRefreshLayout
+        android:id="@+id/pullRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:refreshType="water_drop"
+        android:layout_below="@+id/title_layout">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/pager_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:id="@+id/dot_0"
+                            android:layout_width="5dip"
+                            android:layout_height="5dip"
+                            android:layout_marginLeft="2dip"
+                            android:layout_marginRight="2dip"
+                            android:background="@drawable/dot_focused" />
+
+                        <View
+                            android:id="@+id/dot_1"
+                            android:layout_width="5dip"
+                            android:layout_height="5dip"
+                            android:layout_marginLeft="2dip"
+                            android:layout_marginRight="2dip"
+                            android:background="@drawable/dot_normal" />
+
+                        <View
+                            android:id="@+id/dot_2"
+                            android:layout_width="5dip"
+                            android:layout_height="5dip"
+                            android:layout_marginLeft="2dip"
+                            android:layout_marginRight="2dip"
+                            android:background="@drawable/dot_normal" />
+
+                        <View
+                            android:id="@+id/dot_3"
+                            android:layout_width="5dip"
+                            android:layout_height="5dip"
+                            android:layout_marginLeft="2dip"
+                            android:layout_marginRight="2dip"
+                            android:background="@drawable/dot_normal" />
+
+                        <View
+                            android:id="@+id/dot_4"
+                            android:layout_width="5dip"
+                            android:layout_height="5dip"
+                            android:layout_marginLeft="2dip"
+                            android:layout_marginRight="2dip"
+                            android:background="@drawable/dot_normal" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/center_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/pager_layout"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <Button
+                        android:id="@+id/btn_search"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:drawablePadding="10dp"
+                        android:drawableTop="@mipmap/search_main"
+                        android:padding="10dp"
+                        android:text="搜索" />
+
+                    <Button
+                        android:id="@+id/btn_recommend"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:drawablePadding="10dp"
+                        android:drawableTop="@mipmap/recommend"
+                        android:padding="10dp"
+                        android:text="推荐" />
+
+
+                    <Button
+                        android:id="@+id/btn_lately"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:drawablePadding="10dp"
+                        android:drawableTop="@mipmap/lately"
+                        android:padding="10dp"
+                        android:text="最近" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/center_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/center_layout"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="----猜你喜欢----"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:id="@+id/things_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/center_label"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/may_like_babysafetyhouse_first"
+                        layout="@layout/babysafetyhouse_layout_first"/>
+
+                    <include
+                        android:id="@+id/may_like_babysafetyhouse_second"
+                        layout="@layout/babysafetyhouse_layout_second"/>
+
+                    <include
+                        android:id="@+id/may_like_babysafetyhouse_third"
+                        layout="@layout/babysafetyhouse_layout_third"/>
+
+                    <include
+                        android:id="@+id/may_like_babysafetyhouse_fourth"
+                        layout="@layout/babysafetyhouse_layout_fourth"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="亲！没有更多啦！"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </com.baoyz.widget.PullRefreshLayout>
+
+
+</RelativeLayout>
+
+
+
+

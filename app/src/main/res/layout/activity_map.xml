@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.baidu.mapapi.map.TextureMapView
+        android:id="@+id/mapview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:clickable="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_getinfo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/holo_orange_light"
+            android:onClick="btn_getinfo"
+            android:textSize="17sp"
+            android:text="点我了解该安全屋详细信息"/>
+
+        <LinearLayout
+            android:id="@+id/top_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.7"
+                android:onClick="exit_before"
+                android:src="@mipmap/exit_icon" />
+
+            <EditText
+                android:id="@+id/city"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/searchcity_bg"
+                android:hint="城市"
+                android:paddingLeft="2dp"
+                android:textColorHint="#A9A9A9"
+                android:singleLine="true"
+                android:paddingRight="3dp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/searchkey"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="3"
+                android:paddingLeft="2dp"
+                android:background="@drawable/searchkey_bg"
+                android:ellipsize="end"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="输入宝贝安全屋地址"
+                android:textColorHint="#A9A9A9"
+                android:singleLine="true"
+                android:paddingRight="5dp">
+
+                <requestFocus />
+            </AutoCompleteTextView>
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:onClick="searchButtonProcess"
+                android:src="@mipmap/search2" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/float_button_initlocation"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/init_location"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:onClick="float_button"
+            android:padding="7dp"
+            android:background="@drawable/float_button_bg"
+            android:layout_above="@+id/btn_getinfo" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

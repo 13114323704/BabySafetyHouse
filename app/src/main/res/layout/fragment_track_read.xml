@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.baoyz.widget.PullRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pullRefreshLayout_track_read"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:refreshType="water_drop">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <include
+                android:id="@+id/track_read_layout_first"
+                layout="@layout/evaluate_layout_second" />
+
+            <include
+                android:id="@+id/track_read_layout_second"
+                layout="@layout/evaluate_layout_first" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</com.baoyz.widget.PullRefreshLayout>

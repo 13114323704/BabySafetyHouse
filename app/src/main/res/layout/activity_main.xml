@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.babysafetyhouse.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <View
+        android:id="@+id/divider_view"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_above="@+id/bottomLayout"
+        android:background="@drawable/main_layout_bottom_bg_top_divider" />
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/mainpager_linelayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <ImageView
+                android:id="@+id/mainpager_label"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:padding="2dp"
+                android:src="@mipmap/mainpager_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:text="首页"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/circle_linelayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <ImageView
+                android:id="@+id/circle_label"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:padding="3dp"
+                android:src="@mipmap/circle_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:text="辣妈圈"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buy_linelayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <ImageView
+                android:id="@+id/buy_label"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:padding="2dp"
+                android:src="@mipmap/buy_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:text="买买买"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mine_linelayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="2dp">
+
+            <ImageView
+                android:id="@+id/mine_label"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:padding="2dp"
+                android:src="@mipmap/mine_normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:text="我的"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

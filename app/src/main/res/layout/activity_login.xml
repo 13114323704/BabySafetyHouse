@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    android:fitsSystemWindows="true">
+
+    <ImageView
+        android:id="@+id/image_exit"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:src="@mipmap/exit_icon"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edittext_username"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:hint="请输入用户名" />
+
+        <EditText
+            android:id="@+id/edittext_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="请输入密码" />
+
+        <Button
+            android:id="@+id/btn_real_login"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_real_login_bg"
+            android:textSize="17sp"
+            android:text="登录" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_real_register"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:text="立即注册"
+        android:background="@drawable/btn_real_register_bg"/>
+
+    <com.github.glomadrian.grav.GravView
+        android:id="@+id/grav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:animationGenerators="@array/BubbleAnimations"
+        app:array_colors="@array/bubble"
+        app:ball_from_size="10dp"
+        app:ball_to_size="20dp"
+        app:colorGenerator="com.github.glomadrian.grav.generator.paint.ArrayColorGenerator"
+        app:gravGenerator="com.github.glomadrian.grav.generator.grav.BallGenerator"
+        app:pointGenerator="com.github.glomadrian.grav.generator.point.RegularPointGenerator"
+        app:regular_cell_size="300"
+        app:regular_variance="200"
+        app:shake_direction="vertical"
+        app:shake_max_duration="20000"
+        app:shake_min_duration="10000"
+        app:shake_variance="500dp"
+        app:side_to_side_direction="leftToRight"
+        app:side_to_side_max_duration="10000"
+        app:side_to_side_min_duration="10000"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
